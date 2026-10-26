@@ -1,0 +1,44 @@
+1. What is JDBC?
+JDBC stands for Java Database Connectivity. It is a Java API that allows Java applications to communicate with relational databases.
+
+2. What problem does JDBC solve?
+Suppose you're developing a Java application that must work with different relational databases.
+Some organizations use MySQL. Others use PostgreSQL, Oracle Database, or SQL Server.
+Each database has its own communication protocol and database-specific features.
+Without a common API, your application would need to deal directly with each database's particular interface.
+JDBC provides a common programming interface.
+
+3. How JDBC works internally
+Consider an application that retrieves an employee's details.
+
+        Java Application
+               |
+               | 1. Requests a connection
+               v
+         JDBC API
+               |
+               | 2. Uses the database driver
+               v
+       MySQL JDBC Driver
+               |
+               | 3. Communicates with MySQL
+               v
+          MySQL Server
+               |
+               | 4. Executes SQL
+               v
+         Database Tables
+               |
+               | 5. Returns query results
+               v
+       MySQL JDBC Driver
+               |
+               v
+         JDBC ResultSet
+               |
+               v
+        Java Application
+
+4. What is a JDBC driver?
+A JDBC driver is a software component that allows a Java application to communicate with a particular database.
+
