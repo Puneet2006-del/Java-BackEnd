@@ -42,3 +42,43 @@ Consider an application that retrieves an employee's details.
 4. What is a JDBC driver?
 A JDBC driver is a software component that allows a Java application to communicate with a particular database.
 
+5. How to connect Java Application to a Database?
+First create a connection on your database and write a query then you need to add your database's dependency on pom.xml and write this code =
+
+package com.example.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Main {
+
+    private static final String URL =
+            "jdbc:mysql://localhost:3306/company_db"; 
+
+    private static final String USER = "root";
+
+    private static final String PASSWORD = "your_password"; // write your password which you have set for your database connection.
+
+    public static void main(String[] args) {
+
+        try (Connection connection =
+                     DriverManager.getConnection(URL, USER, PASSWORD)) {
+
+            System.out.println("Database connected successfully!");
+
+        } catch (SQLException e) {
+            System.err.println("Database connection failed.");
+            e.printStackTrace();
+        }
+    }
+}
+
+6. JDBC API's
+   API             Purpose 
+
+`DriverManager` = Obtains connections through registered drivers. 
+`Connection` = Represents a database connection and transaction context. 
+`Statement` = Executes SQL statements.
+`PreparedStatement` = Executes parameterized SQL statements.
+`ResultSet` = Provides access to query results.
