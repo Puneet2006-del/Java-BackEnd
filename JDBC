@@ -1,0 +1,84 @@
+1. What is JDBC?
+JDBC stands for Java Database Connectivity. It is a Java API that allows Java applications to communicate with relational databases.
+
+2. What problem does JDBC solve?
+Suppose you're developing a Java application that must work with different relational databases.
+Some organizations use MySQL. Others use PostgreSQL, Oracle Database, or SQL Server.
+Each database has its own communication protocol and database-specific features.
+Without a common API, your application would need to deal directly with each database's particular interface.
+JDBC provides a common programming interface.
+
+3. How JDBC works internally
+Consider an application that retrieves an employee's details.
+
+        Java Application
+               |
+               | 1. Requests a connection
+               v
+         JDBC API
+               |
+               | 2. Uses the database driver
+               v
+       MySQL JDBC Driver
+               |
+               | 3. Communicates with MySQL
+               v
+          MySQL Server
+               |
+               | 4. Executes SQL
+               v
+         Database Tables
+               |
+               | 5. Returns query results
+               v
+       MySQL JDBC Driver
+               |
+               v
+         JDBC ResultSet
+               |
+               v
+        Java Application
+
+4. What is a JDBC driver?
+A JDBC driver is a software component that allows a Java application to communicate with a particular database.
+
+5. How to connect Java Application to a Database?
+First create a connection on your database and write a query then you need to add your database's dependency on pom.xml and write this code =
+
+package com.example.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Main {
+
+    private static final String URL =
+            "jdbc:mysql://localhost:3306/company_db"; 
+
+    private static final String USER = "root";
+
+    private static final String PASSWORD = "your_password"; // write your password which you have set for your database connection.
+
+    public static void main(String[] args) {
+
+        try (Connection connection =
+                     DriverManager.getConnection(URL, USER, PASSWORD)) {
+
+            System.out.println("Database connected successfully!");
+
+        } catch (SQLException e) {
+            System.err.println("Database connection failed.");
+            e.printStackTrace();
+        }
+    }
+}
+
+6. JDBC API's
+   API             Purpose 
+
+`DriverManager` = Obtains connections through registered drivers. 
+`Connection` = Represents a database connection and transaction context. 
+`Statement` = Executes SQL statements.
+`PreparedStatement` = Executes parameterized SQL statements.
+`ResultSet` = Provides access to query results.
