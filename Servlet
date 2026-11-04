@@ -1,1 +1,4 @@
 Servlet = Servlet is a client side java technology used to provide dynamic responses to the Clients.
+To use Servlet first you need to download "Apache Tomcat" from https://tomcat.apache.org/. 
+after downloading you have to configure Apache Tomcat server on your respective browser.
+
