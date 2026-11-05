@@ -4,4 +4,16 @@ after downloading you have to configure Apache Tomcat server on your respective 
 You can provide static response to user just simply using index.html 
 but if you want to provide dynamic resonses (which changes according to user) you have to use servlet 
 
+Servlet Lifecycle =
+1. The servlet container loads the servlet class into memory.
+2. After loading the class, the container creates an instance, which will be reused for all upcoming requests.
 
+3. init() method used only one time for the entire servlet life used for tasks like to open the database connections.
+ex public void init(ServletConfig config) throws ServletException
+
+4. service() method called for every client request which creates request and response object for each request.
+ex public void service(ServletRequest req, ServletResponse res)
+    throws ServletException, IOException
+
+5. destroy() method called once when the servlet is being removed from service 
+ex public void destroy()
