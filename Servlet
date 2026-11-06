@@ -17,3 +17,21 @@ ex public void service(ServletRequest req, ServletResponse res)
 
 5. destroy() method called once when the servlet is being removed from service 
 ex public void destroy()
+
+6. Request Dispatcher
+A RequestDispatcher is a javax.servlet interface that lets one servlet forward a request to another resource or include
+another resource’s output in its own response, without changing the browser URL. It is used for server‑side navigation and
+resource reuse such as forwarding to JSPs or including headers/footers.
+
+(i) Forward Mehod
+The forward method transfers control to another resource and stops further processing of the current servlet. 
+You can only forward once per request.
+ex. RequestDispatcher reqDispatch = request.getRequestDispatcher("/SecondServlet");
+	reqDispatch.forward(request, response);
+
+(ii) Include Method
+The include method allows you to include the content of multiple resources in the same response. This is useful when you want to combine
+outputs from different resources.
+ex. RequestDispatcher header = request.getRequestDispatcher("/SecondServlet");
+    header.include(request, response);
+
