@@ -35,3 +35,8 @@ outputs from different resources.
 ex. RequestDispatcher header = request.getRequestDispatcher("/SecondServlet");
     header.include(request, response);
 
+7. Session
+A session in a Java Servlet is a mechanism to maintain user-specific data across multiple HTTP requests, typically managed using the HttpSession interface.
+in simple language if developer have mulitple servlets and inside those servlets he or she wants to request data so the developer can request it only from 
+one servlet and can get that data from multiple servlets using session and request dispather interface. user don't have to request for data from different
+different servlets.
