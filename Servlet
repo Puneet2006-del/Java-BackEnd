@@ -53,4 +53,13 @@ a servlet can validate login credentials and determine whether a user is authori
 JSP (JavaServer Pages) is a server-side technology that allows embedding Java code directly into HTML pages. JSP is primarily used for creating dynamic web pages
 and managing the presentation layer. For instance, after a successful login, a JSP page can display a personalized dashboard with user details
 
-
+10. Key Differences:
+Feature											Servlet																JSP
+Purpose					Handles business logic, request processing, and control flow				Focuses on presentation and UI generation
+Language				Pure Java																	HTML with embedded Java code or JSP tags
+Ease of Use				Harder to write HTML; requires out.println statements						Easier to design UI; HTML is straightforward with embedded Java
+Role in MVC				Controller																	View
+Request Handling		Can handle all protocol requests											Primarily handles HTTP requests
+Performance	Faster; 	directly executed as Java class												Slightly slower; compiled into a servlet at runtime
+Logic Separation		Business and presentation logic often combined								Business logic separated using JavaBeans or custom tags
+Compilation				Precompiled Java class														Compiled into a servlet by the JSP engine at runtime
