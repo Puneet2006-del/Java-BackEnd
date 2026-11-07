@@ -45,4 +45,12 @@ different servlets.
 JSP (JavaServer Pages) is a server‑side technology that lets developers embed Java code into HTML to create dynamic web pages,
 and it runs on a Java‑enabled web server such as Apache Tomcat.
 
+9. Difference between the Serlvet and JSP
+Servlets are Java classes that run on a web server to handle client requests, process business logic, and generate dynamic responses.
+They are ideal for tasks like form processing, database interaction, and controlling application flow. For example,
+a servlet can validate login credentials and determine whether a user is authorized to access a dashboard.
+
+JSP (JavaServer Pages) is a server-side technology that allows embedding Java code directly into HTML pages. JSP is primarily used for creating dynamic web pages
+and managing the presentation layer. For instance, after a successful login, a JSP page can display a personalized dashboard with user details
+
 
