@@ -79,3 +79,11 @@ Easier maintenance and scalability
 Supports test‑driven development
 Common in web frameworks and GUI applications
 
+(iii) History
+Created by Trygve Reenskaug in the late 1970s at Xerox PARC for Smalltalk‑80.
+
+(iv) Examples of MVC Frameworks
+ASP.NET MVC 
+Ruby on Rails
+Django (MTV variant)
+Spring MVC
