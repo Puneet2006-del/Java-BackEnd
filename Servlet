@@ -68,3 +68,14 @@ Compilation				Precompiled Java class														Compiled into a servlet by th
 MVC is a software architectural pattern that separates an application into three components — Model, View, and Controller
 to organize code and simplify user‑interface development.
 
+(i) What MVC Means
+Model: Manages data, business logic, and rules.
+View: Displays data to the user (UI).
+Controller: Handles user input, updates the model, and selects the view.
+
+(ii) Why MVC Is Used
+Clear separation of concerns
+Easier maintenance and scalability
+Supports test‑driven development
+Common in web frameworks and GUI applications
+
