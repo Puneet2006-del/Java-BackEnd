@@ -63,3 +63,8 @@ Request Handling		Can handle all protocol requests											Primarily handles H
 Performance	Faster; 	directly executed as Java class												Slightly slower; compiled into a servlet at runtime
 Logic Separation		Business and presentation logic often combined								Business logic separated using JavaBeans or custom tags
 Compilation				Precompiled Java class														Compiled into a servlet by the JSP engine at runtime
+
+11. MVC
+MVC is a software architectural pattern that separates an application into three components — Model, View, and Controller
+to organize code and simplify user‑interface development.
+
