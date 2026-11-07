@@ -40,3 +40,9 @@ A session in a Java Servlet is a mechanism to maintain user-specific data across
 in simple language if developer have mulitple servlets and inside those servlets he or she wants to request data so the developer can request it only from 
 one servlet and can get that data from multiple servlets using session and request dispather interface. user don't have to request for data from different
 different servlets.
+
+8. JSP
+JSP (JavaServer Pages) is a server‑side technology that lets developers embed Java code into HTML to create dynamic web pages,
+and it runs on a Java‑enabled web server such as Apache Tomcat.
+
+
